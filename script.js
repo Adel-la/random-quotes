@@ -13,17 +13,21 @@ function generateRandomQuote() {
   quoteElement.textContent = quote;
   authorElement.textContent = quoteAuthor;
 
-  randomQuote.isFavorite = false;
-  favoriteBtn.textContent = '☆';
+  favoriteBtn.textContent = randomQuote.isFavorite ? '★' : '☆';
 }
 
 generateBtn.addEventListener('click', generateRandomQuote);
 
-const arrayOfFavoriteQuotes = [];
+
 favoriteBtn.addEventListener('click', () => {
   randomQuote.isFavorite = !randomQuote.isFavorite;
   favoriteBtn.textContent = randomQuote.isFavorite ? '★' : '☆';
-  arrayOfFavoriteQuotes.push(quoteElement);
-  console.log(randomQuote)
+  
+  const card = document.createElement('div')
+  card.innerHTML = `
+    <p> "${randomQuote.quote}" </p>
+    <span> ${randomQuote.author} </span> 
+  `
+  document.getElementById('containerOfFavoriteQutes').appendChild(card)
+  card.classList.add('favorite-card')
 });
-console.log(arrayOfFavoriteQuotes)
