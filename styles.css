@@ -1,47 +1,73 @@
-body { 
-  font-family: Arial, sans-serif;
-  background-color: #232323;
-  color: aliceblue;
-}
+  body { 
+    font-family: Arial, sans-serif;
+    background-color: #232323;
+    color: aliceblue;
+    box-sizing: border-box;
+  }
 
-.container{
-  max-width: 600px;
-  margin: 50px auto;
-  text-align: center;
-}
+  .container{
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+  }
 
-button{
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #047dff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-}
+  .btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #047dff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
 
-button:hover{
-  background-color: #004691;
-}
+  .btn:hover{
+    background-color: #004691;
+  }
 
-.paragraph{
-  background-color: #111111;
+  .paragraph{
+    background-color: #111111;
+    border-radius: 5px;
+    width:fit-content;
+    padding: 5px;
+    text-align: center;
+    margin: 2px auto;
+  }
+
+  .btn{
+    margin-top: 10px;
+  }
+
+  #quote::before,
+  #quote::after{
+    content: '"';
+  }
+
+.quote-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #111;
   border-radius: 5px;
-  width:fit-content;
-  padding: 5px;
-  text-align: center;
-  margin: 2px auto;
+  padding: 5px 10px;
 }
 
-.btn{
-  margin-top: 10px;
+/* Убираем фон из quote, чтобы весь блок (цитата + звезда) имел один фон */
+#quote {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  display: inline;
 }
 
-#quote::before,
-#quote::after{
-  content: '"';
-}
-
-#quote{
-   font-style: italic;
+/* Звездочка вплотную к цитате */
+.favorite {
+  color: yellow;
+  background-color: transparent;
+  font-size: 25px;
+  border: none;
+  margin-left: 8px;
+  cursor: pointer;
+  padding: 0;
 }
