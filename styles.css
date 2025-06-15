@@ -1,6 +1,7 @@
 body { 
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #232323;
+  color: aliceblue;
 }
 
 .container{
@@ -21,4 +22,26 @@ button{
 
 button:hover{
   background-color: #004691;
+}
+
+.paragraph{
+  background-color: #111111;
+  border-radius: 5px;
+  width:fit-content;
+  padding: 5px;
+  text-align: center;
+  margin: 2px auto;
+}
+
+.btn{
+  margin-top: 10px;
+}
+
+#quote::before,
+#quote::after{
+  content: '"';
+}
+
+#quote{
+   font-style: italic;
 }
