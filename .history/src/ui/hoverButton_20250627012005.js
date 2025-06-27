@@ -1,0 +1,1 @@
+import { favoriteBtn } from "./dom";

@@ -1,0 +1,2 @@
+export particlesJS('particlesJS', {
+})
