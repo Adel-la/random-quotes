@@ -1,2 +1,0 @@
- particlesJS('particlesJS', {
-})

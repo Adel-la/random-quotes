@@ -6,7 +6,21 @@ body {
   margin: 0;
   padding: 20px;
 }
-
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+#canvasText {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* чтобы он был под контентом */
+  display: block;
+}
 .favorites-container{
   max-width: 600px;
   margin: 50px auto;
@@ -25,11 +39,25 @@ body {
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 20px rgb(0, 59, 127);
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+}
+
+.generate-container{
+  position: relative ;
+  display: inline-block;
+  transform: scale(1.05);
+}
+
+.cursor-image{
+  width: 35px;  
+  position: absolute;
+  bottom: -20px;
+  right: -15px;
 }
 
 .btn:hover{
   background-color: #004691;
-  transform: scale(1.05);
+  
   transition: 0.2s;
   box-shadow: 0 2px 25px rgb(1, 90, 191);  
 }
@@ -150,7 +178,7 @@ body {
   padding: 20px;
   margin: 50px auto;
   max-width: 600px;
-  z-index: 1;
+  z-index: 10;
   margin-top: 10px;
 }
 
@@ -230,3 +258,4 @@ body::before {
   top: 0;
   left: 0;
 }
+

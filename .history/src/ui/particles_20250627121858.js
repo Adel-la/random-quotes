@@ -1,3 +1,0 @@
-export particlesJS('particlesJS', {
-  sd
-})

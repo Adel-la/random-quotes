@@ -14,11 +14,16 @@
       <button id="favorite" class="favorite">☆</button>
     </div>
     <p id="author" class="quote-author"></p>
-    <button id="generate" class="btn">GENERATE</button>
+    <div class="generate-container">
+      <button id="generate" class="btn">GENERATE</button>
+      <img class="cursor-image" src="./img/Group 134.png">
+    </div> 
     <div id="favorites-container" class="favorites-container"></div>
-
+    
     <div id="particles-js"></div>
+    <canvas id="canvasText"></canvas>
   </main>
+  <script id='canvas' type="module" src="text.js"></script>
   <script type="module" src="main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
